@@ -1,0 +1,333 @@
+﻿<Window x:Class="EducatinalApp.WindowTheory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EducatinalApp"
+        mc:Ignorable="d"
+        Title="WindowTheory" Height="720" Width="1280" FontFamily="Ebrima" FontSize="18" Icon="/Logo.png" 
+        WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" ShowInTaskbar="False" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="181*"/>
+            <ColumnDefinition Width="212*"/>
+            <ColumnDefinition Width="189*"/>
+            <ColumnDefinition Width="44*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20 px"/>
+            <RowDefinition Height="110 px"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="20 px"/>
+        </Grid.RowDefinitions>
+
+        <!-- Menu -->
+        <Image Grid.Row="1" Grid.Column="1" Source="/Logo.png"/>
+
+        <Border Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave"  MouseUp="StackPanel_MouseUp_3">
+            <StackPanel  Height="68" Width="80">
+                <Image Width="34" Height="34" Source="/HomeIcon.png"/>
+                <Label HorizontalContentAlignment="Center" FontFamily="Ebrima" FontSize="18">Головна</Label>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave">
+            <StackPanel Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="72" Width="72" >
+                <Image Width="34" Height="34" Source="/books.png"/>
+                <Border BorderBrush="#FF121010" BorderThickness="0 0 0 2">
+                    <Label HorizontalContentAlignment="Center" FontFamily="Ebrima" FontSize="18">Основи</Label>
+                </Border>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave">
+            <StackPanel Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" MouseUp="StackPanel_MouseUp_1" Height="68" Width="89" >
+                <Image Width="34" Height="34" Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\snowflake.png"/>
+                <Label HorizontalContentAlignment="Center" FontFamily="Ebrima" FontSize="18">Фрактали</Label>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center"
+                MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave" MouseUp="StackPanel_MouseUp_2">
+            <StackPanel Grid.Row="1" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="68" Width="208" >
+                <Image Width="34" Height="34" Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorIcon1.png"/>
+                <Label HorizontalContentAlignment="Center" FontFamily="Ebrima" FontSize="18">Перетворення кольорів</Label>
+            </StackPanel>
+        </Border>
+
+        <!-- Menu -->
+        
+        <Border Grid.Row="1" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center"
+                MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave"  MouseUp="StackPanel_MouseUp">
+            <StackPanel Grid.Row="1" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" Height="68" Width="175" >
+                <Image Width="34" Height="34" Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\AffineTransIcon.png"/>
+                <Label HorizontalContentAlignment="Center" FontFamily="Ebrima" FontSize="18">Афіні перетворення</Label>
+            </StackPanel>
+        </Border>
+        <TabControl Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" 
+                    Grid.ColumnSpan="6" Grid.RowSpan="9">
+            <TabItem Header="Фрактали">
+                <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Justify" Margin="0 0 15 0">
+                                Поняття фрактал і фрактальна геометрія, що з’явилися в кінці 70-х, із середини 80-х міцно увійшли до ужитку математиків і програмістів. Слово фрактал утворено від латинського “fractus”, що в перекладі означає “той, що складається з фрагментів”. Воно було запропоноване Бенуа Мандельбротом у 1975 році для позначення нерегулярних, але самоподібних структур, якими він займався. Народження фрактальної геометрії прийнято пов’язувати з виходом у 1977 році книги Мандельброта “The Fractal Geometry of Nature”. У його роботах використані наукові результати інших учених, що працювали в період 1875–1925 років у тій же області (Пуанкаре, Фату, Жюліа, Кантор, Хаусдорф). Але тільки у наш час вдалося об’єднати їхні роботи в єдину систему.
+                                <LineBreak/><LineBreak/>
+                                Роль фракталів в комп’ютерній графіці сьогодні велика. Вони приходять на допомогу, наприклад, коли потрібно за допомогою декількох коефіцієнтів задати лінії і поверхні дуже складної форми. З погляду комп’ютерної графіки, фрактальна геометрія незамінна під час генерації штучних хмар, гір, поверхні морів. Фактично знайдено спосіб легкого представлення складних  об’єктів, які схожі на природні.
+                                <LineBreak/><LineBreak/>
+                                Однією з основних властивостей фракталів є самоподібність. У найпростішому випадку невелика частина фрактала містить інформацію про весь фрактал.
+                                <LineBreak/><LineBreak/>
+                                Визначення фрактала, дане Мандельбротом, звучить так: “Фракталом називається структура, що складається з частин, які в якомусь сенсі подібні до цілого”.
+                                <LineBreak/><LineBreak/>
+                                <Bold>1. Геометричні фрактали</Bold><LineBreak/>
+                                Фрактали цього класу найнаочніші. Цей тип фракталів утворюється шляхом простих геометричних побудов. Наприклад, у двомірному випадку їх отримують за допомогою деякої ламаної (або поверхні в тривимірному випадку), званої генератором. За один крок алгоритму кожен з відрізків (складових ламаної) замінюється на ламану-генератор, у відповідному масштабі. У результаті нескінченного повторення цієї процедури, виходить геометричний фрактал.
+                                <LineBreak/>
+                                Перші ідеї фрактальної геометрії виникли в ХІХ ст. Кантор за допомогою простої рекурсивної процедури перетворив лінію на набір незв’язаних крапок (так званий Пил Кантора). Він брав лінію і видаляв центральну третину, після цього повторював те ж саме з відрізками.
+                                <LineBreak/><LineBreak/>
+                                Відомі геометричці фрактали: лінія Пеано, “дракон” Хартера-Хейтуея, Н-фрактал, Крива Мінковського, Крива Леві, килим Серпінського, трикутник Серпінського, Дерево Піфагора, крива Коха, сніжинка Коха.
+                                <LineBreak/><LineBreak/>
+                                <Button Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2"
+                                        Grid.Row="6" VerticalAlignment="Top" Margin="30 0 0 0"
+                                        Background="#FFFF64A7" BorderBrush="Black" Click="Button_Click">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label>
+                                            До побудови Сніжинки Коха 
+                                        </Label>
+                                    </StackPanel>
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="25"/>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>   
+                                <LineBreak/><LineBreak/>
+                                <Bold>2. Алгебраїчні фрактали</Bold><LineBreak/>
+                                Це найбільша група фракталів. Отримують їх за допомогою нелінійних процесів в n-мірних просторах. Найбільше вивчені двомірні процеси. Інтерпретуючи нелінійний ітераційний процес, як дискретну динамічну систему, можна користуватися термінологією теорії цих систем: фазовий портрет, сталий процес, аттрактор і т.д.
+                                <LineBreak/><LineBreak/>
+                                Відомо, що нелінійні динамічні системи володіють декількома стійкими станами. Той стан, в якому опинилася динамічна система після деякого числа ітерацій, залежить від її початкового стану. Тому кожен стійкий стан (або як говорять – аттрактор) володіє деякою областю початкових станів, з яких система обов’язково потрапить в дані кінцеві стани. Таким чином, фазовий простір системи розбивається на області тяжіння аттракторів. Якщо фазовим є двомірний простір, то забарвлюючи області тяжіння різними кольорами, можна отримати колірний фазовий портрет цієї системи (ітераційного процесу). Міняючи алгоритм вибору кольору, можна отримати складні фрактальні картини з химерними багатоколірними узорами. Несподіванкою для математиків стала можливість за допомогою примітивних алгоритмів породжувати дуже складні нетривіальні структури.
+                                <LineBreak/><LineBreak/>
+                                Приклади алгебраїчних фракталів: множина Мандельброта, множина Жюліа.
+                                <LineBreak/><LineBreak/>
+                                <Bold>3. Стохастичні фрактали</Bold><LineBreak/>
+                                Ще одним відомим класом фракталів є стохастичні фрактали, які виходять в тому випадку, коли в ітераційному процесі випадковим чином міняти які-небудь його параметри. При цьому утворюються об’єкти дуже схожі на природні – несиметричні дерева, порізані берегові лінії і так далі Двовимірні стохастичні фрактали використовуються при моделюванні рельєфу місцевості і поверхні моря. У зв’язку з цим двовимірні  стохастичні  фрактали  дуже  часто  використовуються під час моделювання різних природних об’єктів: рельєфу  місцевості, поверхні моря тощо.
+                                <LineBreak/><LineBreak/>
+                                Найвідоміший стохастичний фрактал - Плазма.
+                            </TextBlock>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Колірні моделі">
+                <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                                       TextAlignment="Justify" Margin="0 0 15 0">
+                                Люди бачать предмети тому, що вони випромінюють або відображають світло. Світло можна розглядати двозначно:  як потік частинок різної енергії (тоді колір світла визначає енергія частинок) або як потік електромагнітних хвиль високої частоти (у цьому випадку колір визначається  довжиною  хвилі).  Ми  розглядатимемо  світло  як  потік електромагнітних хвиль, який після взаємодії з оточуючим середовищем попадає в око, де в результаті фізичної і хімічної реакції виробляються електроімпульси,  що  сприймаються  мозком  людини. Різна  довжина  хвилі  сприймається  людьми як  різний колір (колір – це один із факторів світлового випромінювання).Видиме світло з найбільшою довжиною хвилі буде червоним (780 нанометрів), із найменшою – синім (380 нанометрів). При зміні довжини хвилі кольори плавно переходять один в одний (рис.1). Чисті кольори існують лише при певних довжинах хвилі (наприклад, чистий фіолетовий – при довжині 400 нм). Найбільш чутливе око людини до зелених кольорів (520 нм), потім до червоного і синього. У видимому спектрі людське око розрізняє 120 кольорів. За  допомогою хвильової теорії, висунутої Гюйгенсом у 1678 р., було пояснено багато властивостей світла, зокрема закони відбиття та заломлення.
+                                <LineBreak/><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorWaveRange.png" 
+                                       Margin="400 0 0 0" Width="500"></Image>
+                                <LineBreak/><LineBreak/>
+                                Коли  предмети  випромінюють  світло (такими  є  монітори),  вони мають той колір, який ми бачимо. Коли деякі предмети, наприклад, папір, відбивають світло, то їхній колір визначається кольором світла, що падає на предмет, і кольором, який ці предмети відбивають.
+                                <LineBreak/><LineBreak/>
+                                  Розглянемо,  як  відбувається  сприйняття  світла  людським  оком. Людське око дуже складна система. Коли очі дивляться на світ – світло попадає в око через рогівку, далі за допомогою кришталика проектується на  сітківку  ока,  де  фоторецептори  перетворюють  світлову  інформацію  в імпульси у нервових волокнах. Сітківка  ока  містить  два  принципово  різні  типи  світлочутливих рецепторів:  палички,  які  володіють  широкою  спектральною  кривою чутливості, внаслідок чого вони не розрізняють довжини хвиль, а отже, і кольору  та  колбочки,  які  характеризуються  вузькими  спектральними кривими і тому володіють чутливістю до кольору. У кожному оці знаходиться  біля 6 млн.  колбочок  і 120 млн.  паличок (приблизно 250 млн. рецепторів на два ока).
+                                <LineBreak/><LineBreak/>
+                                В  основі  трикомпонентної  теорії  світла  лежить  той  факт,  що  в центральній  частині  сітківки  знаходяться  три  типи  чутливих  до  кольору колбочок,  які  відповідають  за  чутливість до довгих, середніх і коротких хвиль, тобто один тип колбочок реагує на  зелений  колір,  другий – на червоний, а третій – на синій колір. Ці три  кольори  називаються  основними (базовими). 
+                                <LineBreak/><LineBreak/>
+                                Якщо на всі три види колбочок діє однаковий рівень енергетичної яскравості,  то  світло  буде  білим.  При  низькому  освітленні  колбочки втрачають свою чутливість, зате зростає чутливість паличок, що забезпечує  нашу  здатність  бачити  при  освітленні  низького  рівня,  тому  колбочки працюють вдень, а палички – вночі.
+                                <LineBreak/><LineBreak/>
+                                Отже, колір – це характеристика дії випромінювання на око людини.
+                                <LineBreak/><LineBreak/>
+                                Слід зауважити, що колір має і психофізичну природу, тобто сприйняття кольору носить  суб’єктивний  характер  і  залежить  не  тільки  від  фізичних  властивостей світла, а й від інтерпретації світла зоровою системою людини.           
+                                <LineBreak/><LineBreak/>
+                                Кольори, що існують в природі, діляться на ахроматичні і хроматичні. До групи ахроматичних відносяться всі білі, чорні і проміжні між ними сірі кольори. Група хроматичних кольорів включає всі кольори спектру, а також кольори, яких немає в спектрі, але є результатом змішування спектральних кольорів – золотисті, тютюнові, теракотові, пурпурні і т.д. Промені світла, потрапляючи на сітківку ока, дають відчуття кольору.
+                               <LineBreak/><LineBreak/>
+                                <Button Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2"
+                                        Grid.Row="6" VerticalAlignment="Top" Margin="30 0 0 0"
+                                        Background="#FFFF64A7" BorderBrush="Black" Click="Button_Click1">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label>
+                                            Дослідити колірні моделі
+                                        </Label>
+                                    </StackPanel>
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="25"/>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>   
+                                <LineBreak/><LineBreak/>
+                                <Bold>1. Адитивна колірна модель</Bold><LineBreak/>
+                                Адитивна  модель  кольору  найпростіша  для  розуміння.  Вона  є  досить  штучним  прийомом,  оскільки  продиктована  технологією  виготовлення  електронно-променевих  трубок.  Це апаратно-орієнтована модель, в якій кольори описуються за допомогою складання трьох базових кольорів – червоного, зеленого, синього – в різних пропорціях. Тому модель RGB називають адитивною (від англ. «add» складати, додавати). Кольори також називають колірними каналами моделі RGB.
+                                <LineBreak/><LineBreak/>
+                                Модель названа за першими буквами англійських слів:
+                                <LineBreak/>
+                                R (RED) – червоний;
+                                <LineBreak/>
+                                G (GREEN) – зелений;
+                                <LineBreak/>
+                                B (BLUE) – синій.
+                                <LineBreak/><LineBreak/>
+                                Кожен з базових кольорів може приймати інтенсивність (насиченість) у діапазоні від 0 до 255. Повна кількість кольорів, які представляються цією моделлю, дорівнює 256?256?256 = 16 777 216. За допомогою моделі RGB описуються кольори, що отримуються змішуванням світлових променів. Дану модель використовують монітори, телевізори, сканери, слайд-проектори, кольорові лампи реклами і інші пристрої, в яких колір виходить шляхом змішування світлових пучків. Вона також використовується для опису кольорів на сторінках Інтернету в спеціальному шістнадцятковому вигляді (#RRGGBB).
+                                <LineBreak/><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AddiveModel.png" 
+                                       Margin="400 0 0 0" Width="500"/>
+                                <LineBreak/><LineBreak/>
+                                 Змінюючи інтенсивність свічення кольорових крапок, можна створити велике різноманіття відтінків. Якщо інтенсивність кожного з них максимальна (255), то виходить білий колір. Відсутність всіх трьох кольорів дає чорний колір. Якщо змішуються всі кольори з однаковою інтенсивністю (але не максимальною і не мінімальною), отримуємо сірий колір.
+                                <LineBreak/><LineBreak/>
+                                 Для зображення адитивної моделі найчастіше застосовують одиничний куб з розподілом кольорів уздовж одиничних векторів. Початок відліку (0,0,0) відповідає чорному кольору. Максимальне значення RGB (1,1,1) відповідає білому кольору, (1;0;0) – червоному, (0;1;0) – зеленому, (0;0;1)  –синьому.
+                                <LineBreak/><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AddiveModel3D.png" 
+                                   Margin="400 0 0 0" Width="500"/>
+                                <LineBreak/><LineBreak/>
+                                На сьогодні система RGB є офіційним стандартом. Рішенням Міжнародної  Комісії  з  освітлення (МКО)  в 1931 р.  були  стандартизовані основні  кольори.  Комісія рекомендувала використовувати як R, G, B такі монохроматичні кольори: випромінювання хвиль довжиною для R – 700 нм, для G – 546,1 нм, для B – 435,8 нм.
+                                <LineBreak/><LineBreak/>
+                                Недолік моделі RGB полягає в тому, що не всі кольори, утворені в ній, можна вивести на друк. Проте більше 16 млн кольорів, що представляються в RGB, виявляються цілком достатніми для практичних потреб. Іншими словами, кольори на екрані вашого монітора можуть виглядати інакше при їх виведенні на друк, причому ця відзнака може виявитися принциповою, а не обумовленою низькою якістю принтера або монітора.
+                                <LineBreak/><LineBreak/>
+                                <Bold>2. Субтрактивна колірна модель CMY (CMYK)</Bold><LineBreak/>
+                                Субтрактивна модель використовується для підготовки не екранних, а  друкованих  зображень,  тобто  для  пристроїв,  які  реалізують  принцип поглинання (віднімання) кольорів. Друковані зображення відрізняються від екранних зображень тим, що їх бачать не у світлі, що проходить, а у відбитому світлі, оскільки аркуш паперу не випромінює світло.
+                                <LineBreak/><LineBreak/>
+                                Базовими кольорами моделі CMY є кольори, які виходять у результаті віднімання основних кольорів RGB від білого. Звідси назва моделі субтрактивна (від англ. «to subtract» – віднімати). Базові кольори моделі CMY:
+                                <LineBreak/>
+                                C (CYAN) – блакитний = білий - червоний = зелений + синій;
+                                <LineBreak/>
+                                M (MAGENTA) – пурпурний = білий - зелений = червоний + синій;
+                                <LineBreak/>
+                                Y (YELLOW) – жовтий = білий - синій = червоний + зелений.
+                                <LineBreak/><LineBreak/>
+                                Наприклад,  коли  на  поверхню  паперу  нанести  блакитний (cyan) колір, тоді червоне світло, що падає на папір, повністю поглинатиметься. Отже, блакитна фарба, так би мовити, віднімає червоний колір від білого,  який  є  сумою  червоного,  зеленого  і  синього  кольорів,  тобто  відбивається лише зелена та синя складові світла, що і дає блакитний  колір. Аналогічно  жовта  фарба (Yellow) поглинає синій  колір,  а  пурпурна (Мagenta) – зелений. Білий папір виглядає білим тому, що він відбиває всі кольори і жоден не поглинає.
+                                <LineBreak/><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\SubtractiveModel.png" 
+                                   Margin="450 0 0 0" Width="400"/>
+                                <LineBreak/><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\SubtractiveModel3D.png" 
+                                   Margin="450 0 0 0" Width="400"/>
+                                <LineBreak/><LineBreak/>
+                                Істотною проблемою в поліграфії є чорний колір. Теоретично його можна отримати змішуванням трьох доповнювальних фарб, але на практиці змішування цих трьох кольорів дає невизначений темно-коричневий колір. Отримати на папері чорний колір шляхом змішування трьох фарб складно і незручно через те, що реальні фарби не є абсолютно чистими, через  великі  витрати  дорогого  чорнила  та  високу  вологість  паперу  на струменевих принтерах, а також через небажані візуальні ефекти, тому в принтерах до базових фарб CMY доводиться додавати ще й фарбу чорного кольору (blacK). Така модель кольору називається CMYK. При друці малюнка на кольоровому принтері з чотирма кольорами драйвер  принтера  перетворює RGB-малюнок  у  модель CMYK. Однак багато відтінків, створених в кольоровій системі RGB, не вдається передати при друці на принтері. А це означає, що колірне охоплення системи CMYK менше,  ніж  колірне  охоплення системи RGB. Водночас варто зазначити,  що  лише  частину  кольорів,  які  зустрічаються в природі і сприймаються  людським  зором,  можна  відтворити  на  екрані  монітора, тобто  колірне  охоплення  моделі RGB вужче,  ніж  колірне  охоплення людського  ока.  Як  видно,  жодна  з  моделей  не  є  повною  за  колірним діапазоном.
+                                <LineBreak/><LineBreak/>
+                                <Bold>3. Модель НSB</Bold><LineBreak/>
+                                Системи кольорів RGB і СМУК базуються на обмеженнях, які накладаються апаратним забезпеченням (моніторами комп’ютерів у разі використання RGB і друкарських фарб у разі СМУК). Більш інтуїтивним способом опису кольору є представлення його у вигляді тону, насиченості і яскравості – система НSВ (Hue – тон або відтінок, Saturation – насиченість, Brightness – яскравість) (рис. 6).
+                                <LineBreak/><LineBreak/>
+                                HSB не строга математична модель, але вона дуже зручна для підбору відтінків і кольорів. Ця модель заснована на моделі RGB, але має циліндричну систему координат. Будь-який колір в моделі HSB визначається своїм колірним тоном (власне кольором), насиченістю (тобто відсотком доданої до кольору білої фарби) і яскравістю (відсотком доданої чорної фарби).
+                                <LineBreak/><LineBreak/>
+                                Перевага НSВ перед іншими моделями полягає в тому, що вона більше відповідає природі кольору і добре узгоджується з моделлю сприйняття кольорів людиною. Тон є еквівалентом довжини хвилі світла, насиченість – інтенсивності хвилі, а яскравість – загальної кількості світла. Модель HSB відповідає поняттю кольору, яке використовують професійні художники. У них зазвичай є декілька основних фарб, а всі інші виходять додаванням до них білої і чорної. Таким чином, потрібні кольори – це деяка модифікація основних фарб: освітлених або затемнених. Хоча художники і змішують фарби, але це вже виходить за рамки моделі HSB.
+                                <LineBreak/><LineBreak/>
+                                Тон – це основний колір, який можна виділити в кольорі (довжина хвилі, яка переважає при випромінюванні).
+                                <LineBreak/><LineBreak/>
+                                Насиченість кольору характеризує його «чистоту»: чим вона більша, тим колір «чистіший» (тобто ближче до тонової хвилі). Нульова насиченість відповідає сірому кольору, а максимальна насиченість – найбільш яскравому варіанту даного кольору. Можна вважати, що зменшення насиченості відповідає додаванню білої фарби. У білому кольорі насиченість дорівнює 0, оскільки неможливо виділити його колірний тон.
+                                <LineBreak/><LineBreak/>
+                                Під яскравістю розуміється ступінь освітленості. При нульовій яскравості колір стає чорним. Максимальна яскравість при максимальній насиченості дають найбільш виразний варіант даного кольору. Можна вважати, що яскравість показує величину чорного відтінку доданого до кольору. Яскравість чорного кольору – 0, а білого – 1.
+                                <LineBreak/><LineBreak/>
+                                Графічно модель HSB можна представити у вигляді кільця, уздовж якого розташовуються відтінки кольорів. Кожному відтінку відповідає свій градус, тобто всього налічується 360 варіантів (червоний – 0, жовтий – 60, зелений – 120 градусів і так далі). На зовнішньому краю круга знаходяться чисті спектральні кольори або колірні тони (параметр Н вимірюється в кутових градусах, від 0 до 360). Чим ближче до центру круга розташований колір, тим менше його насиченість, тим він більш бляклий, пастельний (параметр S вимірюється у відсотках). Яскравість (освітленість) відображується на лінійці, перпендикулярній площині колірного круга (параметр В вимірюється у відсотках). Всі кольори на зовнішньому крузі мають максимальну яскравість.
+                                <LineBreak/><LineBreak/>
+                                Модель HSB не є орієнтованою ні на який технічний пристрій відтворення кольорів, тому її називають апаратно незалежною.
+                                <LineBreak/><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\HSB.png" 
+                                   Margin="450 0 0 0" Width="400"/>
+                                <LineBreak/><LineBreak/>
+                                Недолік НSВ полягає в тому, що для роботи на моніторах комп’ютерів її необхідно перетворювати на систему RGB, а для чотирьох кольорового друку – в систему СМУК.
+                                <LineBreak/><LineBreak/>
+                                <Bold>4. Модель НSV</Bold><LineBreak/>
+                                Модель HSV створена Елві Смітом к 1978 році. Її зручно представляти у вигляді світлової шестигранної піраміди. При цьому по вертикальній осі відкладається значення V, а відстань від осі до бічної грані в горизонтальному перетині відповідає параметру S (за діапазон зміни цих величин приймається інтервал від нуля до одиниці) (рис. 7). Шестикутник, що лежить в основі піраміди, є проекцією колірного куба в напрямку його головної діагоналі. Тон кольору H задається кутом, відкладеним навколо вертикальної осі, починаючи від червоного. Точки на самій окружності відповідають чистим (максимально насиченим) кольорам. Точка в центрі відповідає нейтральному кольору мінімальної насиченості (білий, сірий, чорний – це залежить від яскравості). Тобто можна сказати, що кут нахилу вектора визначає відтінок, довжина вектора – насиченість кольору. Величина S змінюється від нуля на осі конуса, до одиниці на його гранях. Значенню V=0 відповідає вершина піраміди (чорний колір), значенню V=1 – основа піраміди; кольори при цьому найбільш інтенсивні. Точка з координатами V=1, S=0 – центр основи піраміди (відповідає білому кольору). Проміжні значення координати V при S=0 (тобто на осі піраміди) відповідають сірим кольорами, якщо S=0, то значення відтінку H вважається невизначеним, S=1, якщо точка лежить на бічній грані піраміди
+                                <LineBreak/><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\HSV.png" 
+                                   Margin="450 0 0 0" Width="400"/>
+                                <LineBreak/><LineBreak/>
+                            </TextBlock>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <!--Афінні перетворення-->
+            <TabItem Header="Афінні перетворення">
+                <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                                       TextAlignment="Justify" Margin="0 0 15 0">
+                                Виконання різноманітних дій з геометричними об’єктами є центральною задачею в комп’ютерній графіці. Тому вибір математичних методів і алгоритмів для її реалізації суттєво впливає на ефективність цілої графічної системи. У сучасній комп’ютерній графіці досить широко використовується метод координат, оскільки графічне зображення складається з пікселів, які задаються координатами. Крім цього, координати використовуються для опису розміщення об’єктів та для створення зображень шляхом перетворень з однієї системи координат в іншу.
+                                <LineBreak/><LineBreak/>
+                                <Button Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2"
+                                        Grid.Row="6" VerticalAlignment="Top" Margin="30 0 0 0"
+                                        Background="#FFFF64A7" BorderBrush="Black" Click="Button_Click2">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label>
+                                            Дослідити афінні перетворення
+                                        </Label>
+                                    </StackPanel>
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="25"/>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>   
+                                <LineBreak/><LineBreak/>
+                                <Bold>1. Двовимірні перетворення</Bold><LineBreak/>
+                                Афінним називається перетворення, що має такі властивостями:
+                                <LineBreak/>
+                                ● будь-яке афінне перетворення може бути представлене як послідовність операцій з числа найпростіших: зсув, розтягнення/стиснення, поворот;
+                                <LineBreak/>
+                                ● зберігаються прямі лінії, паралельність прямих, відношення довжин відрізків, що лежать на одній прямій, і відношення площ фігур.
+                                <LineBreak/><LineBreak/>
+                                Афінні перетворення координат на площині:
+                                <LineBreak/>
+                                (X, Y) – двовимірна система координат,
+                                <LineBreak/>
+                                (x, y) – координати старої системи в новій системі координат.
+                                <LineBreak/><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AffineIm1.png" 
+                                   Margin="10 0 0 0" Width="150"/>
+                                <LineBreak/><LineBreak/>
+                                Загальний вигляд афінного перетворення:<LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AffineIm2.png" 
+                                   Margin="10 0 0 0" Width="200"/>
+                                <LineBreak/><LineBreak/>
+                                де A, B, C, D, E, F – константи.
+                                <LineBreak/><LineBreak/>
+                                Обернене перетворення теж є афінним:<LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AffineIm3.png" 
+                                   Margin="10 0 0 0" Width="150"/> <LineBreak/><LineBreak/>
+                                Найпростіші афінні перетворення об’єкта на площині.<LineBreak/>
+                                <Italic>1. Здвиг об’єкта:</Italic><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AffineIm4.png" 
+                                   Margin="10 0 0 0" Width="120"/> <LineBreak/><LineBreak/>
+                                або матрицею:<LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AffineIm5.png" 
+                                   Margin="10 0 0 0" Width="120"/> <LineBreak/><LineBreak/>
+                                <Italic>2. Масштабування об’єкту:</Italic><LineBreak/><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AffineIm6.png" 
+                                   Margin="10 0 0 0" Width="100"/> <LineBreak/><LineBreak/>
+                                а в матричній формі:<LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AffineIm7.png" 
+                                   Margin="10 0 0 0" Width="150"/> <LineBreak/><LineBreak/>
+                                <Italic>3. Поворот об’єкта відносно центру координат на кут α відповідає системі рівнянь:</Italic><LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AffineIm8.png" 
+                                   Margin="10 0 0 0" Width="200"/> <LineBreak/><LineBreak/>
+                                або задається матрицею
+                                <LineBreak/>
+                                <Image Source="D:\Polytechnic\ComputerGraphics\EducatinalApp\EducatinalApp\ColorModelTheoryImages\AffineIm9.png" 
+                                   Margin="10 0 0 0" Width="170"/> <LineBreak/><LineBreak/>
+                            </TextBlock>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+</Window>

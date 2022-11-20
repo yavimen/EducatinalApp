@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="books.png" />
+    <None Remove="HomeIcon.png" />
+    <None Remove="Logo.png" />
+    <None Remove="screenimg.png" />
+    <None Remove="Windows\TransformIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="books.png" />
+    <Resource Include="HomeIcon.png" />
+    <Resource Include="Logo.png" />
+    <Resource Include="screenimg.png" />
+    <Resource Include="Windows\TransformIcon.png" />
+  </ItemGroup>
+
+</Project>
