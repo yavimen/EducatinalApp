@@ -73,32 +73,27 @@ namespace EducatinalApp
             points.Add(secondPoint);
             points.Add(thirdPoint);
             points.Add(fourthPoint);
-            Polygon polygon;
             switch (vertex)
             {
                 case 1:
-                    points = FigureScaling(firstPoint, points, 1 / DecreasingSlider.Value);
-                    polygon = FigureTurning(firstPoint, points, TurtingAngleSlider.Value);
+                    var pol = MyTransforming(firstPoint, points, DecreasingSlider.Value, TurtingAngleSlider.Value);
                     ATCanvas.Children.Clear();
-                    ATCanvas.Children.Add(polygon);
+                    ATCanvas.Children.Add(pol);
                     break;
                 case 2:
-                    points = FigureScaling(secondPoint, points, 1 / DecreasingSlider.Value);
-                    polygon = FigureTurning(secondPoint, points, TurtingAngleSlider.Value);
+                    var pol1 = MyTransforming(secondPoint, points, DecreasingSlider.Value, TurtingAngleSlider.Value);
                     ATCanvas.Children.Clear();
-                    ATCanvas.Children.Add(polygon);
+                    ATCanvas.Children.Add(pol1);
                     break;
                 case 3:
-                    points = FigureScaling(thirdPoint, points, 1 / DecreasingSlider.Value);
-                    polygon = FigureTurning(thirdPoint, points, TurtingAngleSlider.Value);
+                    var pol2 = MyTransforming(thirdPoint, points, DecreasingSlider.Value, TurtingAngleSlider.Value);
                     ATCanvas.Children.Clear();
-                    ATCanvas.Children.Add(polygon);
+                    ATCanvas.Children.Add(pol2);
                     break;
                 case 4:
-                    points = FigureScaling(fourthPoint, points, 1 / DecreasingSlider.Value);
-                    polygon = FigureTurning(fourthPoint, points, TurtingAngleSlider.Value);
+                    var pol3 = MyTransforming(firstPoint, points, DecreasingSlider.Value, TurtingAngleSlider.Value);
                     ATCanvas.Children.Clear();
-                    ATCanvas.Children.Add(polygon);
+                    ATCanvas.Children.Add(pol3);
                     break;
                 default:
                     break;
@@ -194,6 +189,98 @@ namespace EducatinalApp
                 .ForEach(p => polygon.Points.Add(p));
 
             return polygon;
+        }
+
+        private Polygon MyTransforming(Point mainPoint, List<Point> figure, double multiplier, double degrees) {
+            double[,] scaling = {
+                { 1 / multiplier, 0 },
+                {0, 1 / multiplier }
+            };
+            //[x, y]
+            var angle = (Math.PI * degrees / 180.0);
+
+            double[,] turning = {
+                { Math.Cos(angle), Math.Sin(angle) },
+                { (-1) * Math.Sin(angle), Math.Cos(angle) }
+            };
+
+            double[,] centerPoint = new double[,] { { mainPoint.X, mainPoint.Y } };
+            double[,] targetPoint = new double[,] { { 0, 0 } };
+
+            List<Point> points = new List<Point>();
+
+            for (int i = 0; i < figure.Count; ++i)
+            {
+                targetPoint[0, 0] = figure[i].X;
+                targetPoint[0, 1] = figure[i].Y;
+
+                targetPoint = MatrixSubstraction(targetPoint, centerPoint);
+                targetPoint = MatrixMultiplication(targetPoint, scaling);
+                targetPoint = MatrixMultiplication(targetPoint, turning);
+                targetPoint = MatrixAddition(targetPoint, centerPoint);
+
+                points.Add(new Point(targetPoint[0,0], targetPoint[0, 1]));
+            }
+
+            Polygon polygon = new Polygon();
+            polygon.Stroke = Brushes.Black;
+            polygon.StrokeThickness = 2;
+
+            points
+                .ForEach(p => polygon.Points.Add(p));
+
+            return polygon;
+        }
+
+        private double[,] MatrixMultiplication(double[,] matrix1, double[,] matrix2)
+        {
+            double[,] result = new double[matrix1.GetLength(0), matrix1.GetLength(1)];
+
+            var d1 = matrix1.GetLength(0);
+            var d2 = matrix1.GetLength(1);
+
+            for (int i = 0; i < result.GetLength(0); ++i)
+            {
+                for (int j = 0; j < result.GetLength(1); ++j)
+                {
+                    result[i, j] = 0;
+
+                    for (int k = 0; k < matrix2.GetLength(1); ++k) {
+                        result[i, j] += matrix1[i, k] * matrix2[k, j];
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        private double[,] MatrixSubstraction(double[,] matrix1, double[,] matrix2)
+        {
+            var result = new double[matrix1.GetLength(0), matrix1.GetLength(1)];
+            var d1 = matrix1.GetLength(0);
+            var d2 = matrix1.GetLength(1);
+            for (int i = 0; i < matrix1.GetLength(0); i++) {
+                for (int j = 0; j < matrix1.GetLength(1); j++)
+                {
+                    result[i, j] = matrix1[i, j] - matrix2[i, j];
+                }
+            }
+            return result;
+        }
+
+        private double[,] MatrixAddition(double[,] matrix1, double[,] matrix2)
+        {
+            var result = new double[matrix1.GetLength(0), matrix1.GetLength(1)];
+            var d1 = matrix1.GetLength(0);
+            var d2 = matrix1.GetLength(1);
+            for (int i = 0; i < matrix1.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix1.GetLength(1); j++)
+                {
+                    result[i, j] = matrix1[i, j] + matrix2[i, j];
+                }
+            }
+            return result;
         }
     }
 }
